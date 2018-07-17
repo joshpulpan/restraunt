@@ -1,0 +1,15 @@
+create or replace PROCEDURE SP_UPDATE_LOCATION(Locationid VARCHAR2, userid VARCHAR2, tr NUMBER, st VARCHAR2, cit VARCHAR2, ct VARCHAR2, stat VARCHAR2, zp VARCHAR2)
+is
+BEGIN
+update LOCATIONS
+    set
+    location_id=locationid,
+    user_id=userid,
+    tax_rate=tr,
+    street=st,
+    city=cit,
+    state=stat,
+    country=ct,
+    zip=zp
+    where location_id=locationid;
+END;
